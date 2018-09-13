@@ -12,12 +12,8 @@ body {
 
 .cell {
   box-sizing: border-box;
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   background: #fff;
-}
-
-.trace {
-  background-color: #333;
 }
 
 .btns {
