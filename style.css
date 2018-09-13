@@ -14,5 +14,23 @@
 }
 
 .trace {
-  background-color: #111;
+  background-color: #333;
+}
+
+.btn {
+  background: #fff;
+  color: #333;
+  padding: 0.5em 1em;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  font-size: 20px;
+  box-shadow: 2px 2px 10px 2px rgba(0,0,0, 0.2);
+  transition: 0.1s all ease-in-out;
+}
+
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #333;
+  box-shadow: 2px 2px 25px 7px rgba(0,0,0, 0.2);
 }
