@@ -4,22 +4,21 @@ const sizeInput = document.querySelector('#gridSize');
 const generateBtn = document.querySelector('#generate');
 sizeInput.value = 16;
 generateCells(sizeInput.value);
-
-
 let cells = document.querySelectorAll('.cell');
 clear.addEventListener('click', clearBoard);
 
 generateBtn.addEventListener('click', (e) => {
   clearBoard();
+  if(sizeInput.value < 1 || sizeInput.value > 64) {
+    alert('Size must be between 1 and 64');
+    return false;
+  }
   removeCells();
   generateCells(sizeInput.value);
 });
 
-
-
 function generateCells(gridSize) {
-  container.style.gridTemplateColumns = `repeat(${sizeInput.value}, 1fr)`;
-  container.style.gridTemplateRows = `repeat(${sizeInput.value}, 1fr)`;
+  changeGridSize(sizeInput.value);
   for(let i = 0; i < Math.pow(gridSize, 2); i++){
     const cell = document.createElement('div');
     cell.classList.add(`cell`);
@@ -28,6 +27,11 @@ function generateCells(gridSize) {
     });
     container.appendChild(cell);
   }
+}
+
+function changeGridSize(size) {
+  container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+  container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 }
 
 function clearBoard() {
