@@ -28,7 +28,6 @@ function generateCells(gridSize) {
     });
     container.appendChild(cell);
   }
-  //clear.onclick = clearBoard;
 }
 
 function clearBoard() {
