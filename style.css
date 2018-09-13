@@ -4,12 +4,10 @@ body {
 
 .grid-container {
   display: grid;
-  width: 50vw;
-  height: 50vw;
+  width: 40vw;
+  height: 40vw;
   margin: 50px auto; 
   border: 3px solid #555;
-  /* grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: repeat(16, 1fr); */
 }
 
 .cell {
@@ -40,9 +38,9 @@ body {
 }
 
 .btn:hover {
-  background-color: #333;
+  background-color: #FFD54F;
   color: #fff;
-  border: 1px solid #333;
+  border: 1px solid #FFD54F;
   box-shadow: 2px 2px 25px 7px rgba(0,0,0, 0.2);
 }
 
