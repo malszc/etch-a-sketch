@@ -1,17 +1,21 @@
-const container = document.querySelector('.grid-container');
+const container = document.querySelector('#grid-container');
 const clear = document.querySelector('#clear');
 const sizeInput = document.querySelector('#gridSize');
 const generateBtn = document.querySelector('#generate');
 sizeInput.value = 16;
 generateCells(sizeInput.value);
 
-const cells = document.querySelectorAll('.cell');
+
+let cells = document.querySelectorAll('.cell');
+clear.addEventListener('click', clearBoard);
 
 generateBtn.addEventListener('click', (e) => {
   clearBoard();
   removeCells();
   generateCells(sizeInput.value);
 });
+
+
 
 function generateCells(gridSize) {
   container.style.gridTemplateColumns = `repeat(${sizeInput.value}, 1fr)`;
@@ -24,13 +28,13 @@ function generateCells(gridSize) {
     });
     container.appendChild(cell);
   }
+  //clear.onclick = clearBoard;
 }
 
 function clearBoard() {
-  clear.addEventListener('click', (e) => {
+  cells = document.querySelectorAll('.cell');
     cells.forEach((cell) => {
       cell.classList.remove('trace');
-    });
   });
 }
 
