@@ -42,7 +42,8 @@ function changeGridSize(size) {
 function clearBoard() {
   cells = document.querySelectorAll('.cell');
     cells.forEach((cell) => {
-      cell.classList.remove('trace');
+      cell.setAttribute('data-count', '0');
+      cell.style.backgroundColor = colors[cell.getAttribute('data-count')];
   });
 }
 
